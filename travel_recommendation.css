@@ -1,0 +1,99 @@
+/* Basic CSS for the navigation bar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-center {
+    color: white;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin-right: 10px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Basic CSS for the form elements */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('wallpapernyc.jpg');
+    background-size:  auto;
+    background-position: center;
+}
+
+h1 {
+
+    color: white;
+    align-items: center;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+.homeinfo {
+    margin-left: 250px;
+    margin-top: 300px;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 250px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+button {
+    padding: 7px 15px;
+    background-color:green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px; 
+    border-radius: 5px;
+}
+
+button:last-child {
+    margin-right: 0; /* Remove margin for the last button */
+}
+
+button:hover {
+    background-color: green;
+}
