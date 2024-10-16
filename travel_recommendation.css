@@ -1,34 +1,51 @@
-/* Basic CSS for the navigation bar */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Navigation Bar Styling */
 nav {
     background-color: black;
-    padding: 20px;
+    padding: 15px 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.nav-center {
+.logo {
     color: white;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    margin-right: 10px;
+}
+
+.nav-center {
     flex: 1;
     display: flex;
     justify-content: center;
-    margin-left: 100px;
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
-    justify-content: center;
 }
 
 .nav-links li {
-    margin-right: 10px;
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .nav-right {
@@ -36,64 +53,145 @@ nav {
     align-items: center;
 }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* Basic CSS for the form elements */
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('wallpapernyc.jpg');
-    background-size:  auto;
-    background-position: center;
-}
-
-h1 {
-
-    color: white;
-    align-items: center;
-}
-
-div {
-    margin-bottom: 10px;
-}
-
-.homeinfo {
-    margin-left: 250px;
-    margin-top: 300px;
-}
-
-label {
-    display: inline-block;
-    width: 100px;
-    align-items: center;
-}
-
-input[type="text"],
-input[type="number"],
-select {
-    width: 250px;
-    padding: 5px;
-    margin-right: 10px;
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
 }
 
 button {
-    padding: 7px 15px;
-    background-color:green;
+    padding: 10px 20px;
+    background-color: #007b5e;
     color: white;
     border: none;
-    cursor: pointer;
-    margin-right: 10px; 
     border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
 }
 
-button:last-child {
-    margin-right: 0; /* Remove margin for the last button */
+.btn-book {
+    background-color: #29a19c;
+    font-size: 14px; /* Smaller font size */
+    padding: 6px 15px; /* Less padding */
+    border-radius: 4px; /* Subtle border radius */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    width: fit-content; /* Prevent stretching */
+    align-self: flex-start; /* Align to the left */
 }
 
 button:hover {
-    background-color: green;
+    background-color: #005f46;
+}
+
+/* Background Image Styling */
+body {
+    background-image: url('wallpapernyc.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Layout for Home Text and Recommendations */
+/* Main Layout */
+.main-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensure vertical centering */
+    height: calc(100vh - 70px); /* Full height minus navbar */
+    padding: 0 60px;
+    gap: 40px; /* Space between the two sections */
+}
+
+/* Home Info Section */
+.homeinfo {
+    flex: 1;
+    max-width: 45%; /* Ensure proper width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin-top: 0; /* No extra top margin */
+}
+
+.homeinfo h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.homeinfo p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+    flex: 1;
+    max-width: 50%; /* Control size */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 50px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+/* Recommendations Container */
+.recommendations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Recommendation Card */
+.recommendation-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%; /* Reduce size slightly */
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recommendation-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Button inside Recommendation */
+.visit-btn {
+    background-color: #29a19c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.visit-btn:hover {
+    background-color: #1e7a75;
 }

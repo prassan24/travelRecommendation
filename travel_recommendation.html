@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Travel Recommendation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Bloom</title>
     <link rel="stylesheet" href="./travel_recommendation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="./travel_recommendation.js"></script> <!-- New script inclusion -->
 </head>
 <body>
     <nav>
-        <h1>Travel Right</h1>
+        <h1 class="logo"><i class="fas fa-plane-departure"></i> TravelBloom</h1>
         <div class="nav-center">
             <ul class="nav-links">
-                <li><a href="./travel_recommendation.html" id="home">Home</a></li>
-                <li><a href="./travel_recommendation.html" id="aboutus">About Us</a></li>
-                <li><a href="./travel_recommendation.html" id="contactus">Contact Us</a></li>
+                <li><a href="travel_recommendation.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
             </ul>
         </div>
         <div class="nav-right">
-            <input type="text" id="searchbar" placeholder=" Enter a destination or a keyword">
-            <button id='btnSearch'>Search</button>
-            <button id='btnReset'>Reset</button>
+            <input type="text" id="searchbar" placeholder="Enter a destination or keyword">
+            <button id="btnSearch" onclick="handleSearch()">Search</button> <!-- New onclick handler -->
+            <button id="btnReset" onclick="resetSearch()">Clear</button>
         </div>
     </nav>
 
-    <div class="homeinfo">
-        <h1>EXPLORE DREAM DESTINATION</h1>
-
+    <div class="main-layout">
+        <div class="homeinfo">
+            <h1>EXPLORE DREAM DESTINATION</h1>
+            <p>
+                It encourages exploration of unfamiliar territories, embracing diverse cultures and landscapes,
+                while pursuing the destination that captivates the heart and ignites a sense of wonder.
+            </p>
+            <button class="btn-book">Book Now</button>
+        </div>
+    
+        <div class="recommendations-section" style="display: none;">
+            <div id="recommendations" class="recommendations-container">
+                <!-- Recommendations will be dynamically inserted here -->
+            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TravelBloom</title>
+    <link rel="stylesheet" href="./contact_us.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        // JavaScript to show the 'Submitted' message
+        function handleSubmit(event) {
+            event.preventDefault(); // Prevent the form from refreshing the page
+            const messageContainer = document.getElementById('submit-message');
+            messageContainer.innerHTML = "Submitted! We will contact you soon!";
+            messageContainer.style.display = "block"; // Show the message
+        }
+    </script>
+</head>
+<body>
+    <nav>
+        <h1 class="logo"><i class="fas fa-plane-departure"></i> TravelBloom</h1>
+        <ul class="nav-links">
+            <li><a href="travel_recommendation.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-header">
+        <h1>CONTACT US</h1>
+        <p>Get in touch</p>
+    </section>
+
+    <section class="contact-form-section">
+        <form action="#" method="post" class="contact-form" onsubmit="handleSubmit(event)">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+
+            <!-- Hidden message that will appear after form submission -->
+            <p id="submit-message" style="display:none; color: green; font-size: 16px; margin-top: 10px;"></p>
+        </form>
+    </section>
+</body>
+</html>
