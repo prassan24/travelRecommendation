@@ -138,6 +138,7 @@ body {
 }
 
 /* Recommendations Section */
+/* Recommendations Section */
 .recommendations-section {
     flex: 1;
     max-width: 50%; /* Control size */
@@ -153,7 +154,8 @@ body {
 .recommendations-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px; /* Increased gap between cards */
+    padding: 10px; /* Added padding around the container */
 }
 
 /* Recommendation Card */
@@ -166,6 +168,7 @@ body {
     padding: 15px;
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 15px; /* Additional space between individual cards */
 }
 
 .recommendation-card:hover {
